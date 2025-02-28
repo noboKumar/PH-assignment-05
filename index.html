@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,14 +22,96 @@
     />
 
     <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/1580155eab.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/1580155eab.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
 
     <style>
-      .poppins{
+      .poppins {
         font-family: "Poppins", sans-serif;
       }
     </style>
   </head>
-  <body></body>
+  <body class="poppins bg-slate-100 p-6">
+    <!-- nav bar -->
+    <nav
+      class="container mx-auto flex justify-between p-6 bg-white rounded-2xl"
+    >
+      <div class="flex items-center gap-3">
+        <img src="./assets/logo.png" alt="" />
+        <h1 class="text-4xl font-light">
+          Dev<span class="font-bold">Board</span>
+        </h1>
+      </div>
+
+      <div class="flex items-center gap-8">
+        <button class="flex btn rounded-3xl">
+          <img src="./assets/checkbox.png" alt="" />
+          <p class="text-3xl font-bold">23</p>
+        </button>
+        <button class="btn rounded-3xl">
+          <img src="./assets/theme-btn.png" alt="" />
+        </button>
+      </div>
+    </nav>
+    <!-- main section -->
+    <main class="container mx-auto bg-white rounded-2xl mt-5 mb-14 p-6">
+      <!-- first row -->
+      <section class="grid grid-cols-4 gap-6">
+        <div class="flex gap-5 p-8 rounded-xl bg-slate-50">
+          <img
+            class="bg-white p-4 rounded-full"
+            src="./assets/checkbox.png"
+            alt=""
+          />
+          <div>
+            <p class="font-medium text-slate-600">Task Assigned</p>
+            <p class="font-bold text-3xl">05</p>
+          </div>
+        </div>
+        <div
+          class="flex items-center py-6 pl-8 pr-20 rounded-xl text-2xl gap-5 bg-gradient-to-r from-blue-700 to-indigo-300 col-span-2 cursor-pointer"
+        >
+          <img src="./assets/board.png" alt="" />
+          <h1 class="font-medium text-2xl text-white">
+            Discover Something <br />
+            New Today!
+          </h1>
+        </div>
+        <div class="flex bg-slate-50 p-8 rounded-xl">
+          <img
+            class="bg-white p-4 rounded-full"
+            src="./assets/calender.png"
+            alt=""
+          />
+          <h1 class="text-xl">
+            Wed , <br />
+            <span class="font-bold">Jul 28 2025</span>
+          </h1>
+        </div>
+      </section>
+      <hr class="border-dotted" />
+      <!-- main card section -->
+      <section>
+        <p>ShopEase</p>
+        <h1>Fix Mobile Button Issue</h1>
+        <p class="text-ellipsis">
+          Debug using Chrome DevTools, check for overlapping elements, and
+          ensure onClick works properly and ensure onClick works properly
+        </p>
+        <div>
+          <p>
+            Deadline <br />
+            21 March 2025
+          </p>
+          <button>Completed</button>
+        </div>
+      </section>
+    </main>
+  </body>
   <script src="./scripts/script.js"></script>
 </html>
