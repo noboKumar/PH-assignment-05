@@ -47,7 +47,6 @@ function completeButton() {
     Number(document.getElementById("task-assigned").innerText) - 1;
   let totalTask = Number(document.getElementById("total-task").innerText) + 1;
   const activityContainer = document.getElementById("activity-container");
-  const currentTime = new Date().toLocaleTimeString();
 
   for (const button of completeBtn) {
     button.addEventListener("click", function (event) {
@@ -69,7 +68,7 @@ function completeButton() {
       const p = document.createElement("p");
       p.innerHTML = `
       <p class="text-lg text-slate-600 bg-slate-100 rounded-xl p-5 my-5">
-        You have Complete The Task ${taskHead} at ${currentTime}
+        You have Complete The Task ${taskHead} at ${new Date().toLocaleTimeString()}
       </p>`;
       activityContainer.appendChild(p);
 
