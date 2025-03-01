@@ -43,12 +43,16 @@ currentDate();
 // complete button
 function completeButton() {
   const completeBtn = document.getElementsByClassName("complete-btn");
-  let taskAssign = Number(document.getElementById("task-assigned").innerText) - 1;
+  let taskAssign =
+    Number(document.getElementById("task-assigned").innerText) - 1;
   let totalTask = Number(document.getElementById("total-task").innerText) + 1;
+  const activityContainer = document.getElementById("activity-container");
+  const currentTime = new Date().toLocaleTimeString();
+  const cards = document.getElementsByClassName("cards");
 
   for (const button of completeBtn) {
-    button.addEventListener("click", function () {
-      alert("Board Updated Successfully")
+    button.addEventListener("click", function (event) {
+      alert("Board Updated Successfully");
       document.getElementById("task-assigned").innerText = `0${taskAssign--}`;
       document.getElementById("total-task").innerText = `${totalTask++}`;
       button.disabled = true;
@@ -56,6 +60,15 @@ function completeButton() {
       if (taskAssign === -1) {
         alert("congrats!!! You Have Completed all the current Task");
       }
+      const taskHead = event.target.parentNode.parentNode.querySelector(".task-head").innerText;
+
+      const p = document.createElement("p");
+      p.innerHTML = `
+      <p class="text-lg text-slate-600 bg-slate-100 rounded-xl p-5 my-5">
+        You have Complete The Task ${taskHead} at ${currentTime}
+      </p>`;
+      activityContainer.appendChild(p);
+
     });
   }
 }
