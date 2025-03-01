@@ -51,7 +51,7 @@
       <div class="flex items-center gap-8">
         <button class="flex btn rounded-3xl">
           <img src="./assets/checkbox.png" alt="" />
-          <p class="text-3xl font-bold">23</p>
+          <p id="total-task" class="text-3xl font-bold">23</p>
         </button>
         <button class="btn rounded-3xl" id="theme-btn">
           <img src="./assets/theme-btn.png" alt="" />
@@ -63,7 +63,7 @@
       <div class="bg-white rounded-2xl mt-5 mb-14 p-6 col-span-3">
         <!-- first row -->
         <section class="grid grid-cols-4 gap-6 pb-8">
-          <div class="flex gap-2 p-7 rounded-xl bg-slate-50">
+          <div class="flex gap-2 p-7 rounded-xl bg-slate-100">
             <img
               class="bg-white p-4 rounded-3xl"
               src="./assets/checkbox.png"
@@ -71,7 +71,7 @@
             />
             <div>
               <p class="font-medium text-slate-600">Task Assigned</p>
-              <p class="font-bold text-3xl">06</p>
+              <p id="task-assigned" class="font-bold text-3xl">06</p>
             </div>
           </div>
 
@@ -86,7 +86,7 @@
             </h1>
           </div>
 
-          <div class="flex gap-2 bg-slate-50 p-8 rounded-xl">
+          <div class="flex gap-2 bg-slate-100 p-8 rounded-xl">
             <img
               class="bg-white p-4 rounded-3xl"
               src="./assets/calender.png"
@@ -101,9 +101,9 @@
         <hr class="border-dotted" />
         <!-- main card section -->
         <section class="grid grid-cols-3 gap-9 mt-8">
-          <div class="bg-slate-50 rounded-2xl p-8">
+          <div class="bg-slate-100 rounded-2xl p-8">
             <p class="bg-white text-lg inline px-5 py-3 rounded-lg">ShopEase</p>
-            <h1 class="text-2xl font-medium py-4">Fix Mobile Button Issue</h1>
+            <h1 class="text-xl font-medium py-4">Fix Mobile Button Issue</h1>
             <input
               class="text-ellipsis text-slate-500 p-4 rounded-lg w-full h-24"
               value="Debug using Chrome DevTools, check for overlapping elements, and
@@ -115,14 +115,38 @@
                 <p class="text-slate-500">Deadline</p>
                 <p>21 March 2025</p>
               </div>
-              <button class="font-medium btn bg-blue-700 text-white text-base">
+              <button
+                class="complete-btn font-medium btn bg-blue-700 hover:bg-blue-500 active:bg-blue-700 text-white text-base"
+              >
                 Completed
               </button>
             </div>
           </div>
-          <div class="bg-slate-50 rounded-2xl p-8">
-            <p class="bg-white text-lg inline px-5 py-3 rounded-lg">ShopEase</p>
-            <h1 class="text-2xl font-medium py-4">Fix Mobile Button Issue</h1>
+          <div class="bg-slate-100 rounded-2xl p-8">
+            <p class="bg-white text-lg inline px-5 py-3 rounded-lg">
+              CloudSync
+            </p>
+            <h1 class="text-xl font-medium py-4">Add Dark Mode</h1>
+            <input
+              class="text-ellipsis text-slate-500 p-4 rounded-lg w-full h-24"
+              value="Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect."
+            />
+            <hr class="border-dotted my-3" />
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-slate-500">Deadline</p>
+                <p>25 March 2025</p>
+              </div>
+              <button
+                class="complete-btn font-medium btn bg-blue-700 hover:bg-blue-500 active:bg-blue-700 text-white text-base"
+              >
+                Completed
+              </button>
+            </div>
+          </div>
+          <div class="bg-slate-100 rounded-2xl p-8">
+            <p class="bg-white text-lg inline px-5 py-3 rounded-lg">SwiftPay</p>
+            <h1 class="text-xl font-medium py-4">Optimize Home page</h1>
             <input
               class="text-ellipsis text-slate-500 p-4 rounded-lg w-full h-24"
               value="Debug using Chrome DevTools, check for overlapping elements, and
@@ -132,16 +156,18 @@
             <div class="flex items-center justify-between">
               <div>
                 <p class="text-slate-500">Deadline</p>
-                <p>21 March 2025</p>
+                <p>27 March 2025</p>
               </div>
-              <button class="font-medium btn bg-blue-700 text-white text-base">
+              <button
+                class="complete-btn font-medium btn bg-blue-700 hover:bg-blue-500 active:bg-blue-700 text-white text-base"
+              >
                 Completed
               </button>
             </div>
           </div>
-          <div class="bg-slate-50 rounded-2xl p-8">
-            <p class="bg-white text-lg inline px-5 py-3 rounded-lg">ShopEase</p>
-            <h1 class="text-2xl font-medium py-4">Fix Mobile Button Issue</h1>
+          <div class="bg-slate-100 rounded-2xl p-8">
+            <p class="bg-white text-lg inline px-5 py-3 rounded-lg">Meta</p>
+            <h1 class="text-xl font-medium py-4">Add new emoji 🤲</h1>
             <input
               class="text-ellipsis text-slate-500 p-4 rounded-lg w-full h-24"
               value="Debug using Chrome DevTools, check for overlapping elements, and
@@ -151,16 +177,20 @@
             <div class="flex items-center justify-between">
               <div>
                 <p class="text-slate-500">Deadline</p>
-                <p>21 March 2025</p>
+                <p>29 March 2025</p>
               </div>
-              <button class="font-medium btn bg-blue-700 text-white text-base">
+              <button
+                class="complete-btn font-medium btn bg-blue-700 hover:bg-blue-500 active:bg-blue-700 text-white text-base"
+              >
                 Completed
               </button>
             </div>
           </div>
-          <div class="bg-slate-50 rounded-2xl p-8">
-            <p class="bg-white text-lg inline px-5 py-3 rounded-lg">ShopEase</p>
-            <h1 class="text-2xl font-medium py-4">Fix Mobile Button Issue</h1>
+          <div class="bg-slate-100 rounded-2xl p-8">
+            <p class="bg-white text-lg inline px-5 py-3 rounded-lg">
+              Google LLC
+            </p>
+            <h1 class="text-xl font-medium py-4">Integrate OpenAI API</h1>
             <input
               class="text-ellipsis text-slate-500 p-4 rounded-lg w-full h-24"
               value="Debug using Chrome DevTools, check for overlapping elements, and
@@ -170,16 +200,20 @@
             <div class="flex items-center justify-between">
               <div>
                 <p class="text-slate-500">Deadline</p>
-                <p>21 March 2025</p>
+                <p>5 April 2025</p>
               </div>
-              <button class="font-medium btn bg-blue-700 text-white text-base">
+              <button
+                class="complete-btn font-medium btn bg-blue-700 hover:bg-blue-500 active:bg-blue-700 text-white text-base"
+              >
                 Completed
               </button>
             </div>
           </div>
-          <div class="bg-slate-50 rounded-2xl p-8">
-            <p class="bg-white text-lg inline px-5 py-3 rounded-lg">ShopEase</p>
-            <h1 class="text-2xl font-medium py-4">Fix Mobile Button Issue</h1>
+          <div class="bg-slate-100 rounded-2xl p-8">
+            <p class="bg-white text-lg inline px-5 py-3 rounded-lg">
+              Glassdoar
+            </p>
+            <h1 class="text-xl font-medium py-4">Improve Job searching</h1>
             <input
               class="text-ellipsis text-slate-500 p-4 rounded-lg w-full h-24"
               value="Debug using Chrome DevTools, check for overlapping elements, and
@@ -189,28 +223,11 @@
             <div class="flex items-center justify-between">
               <div>
                 <p class="text-slate-500">Deadline</p>
-                <p>21 March 2025</p>
+                <p>10 April 2025</p>
               </div>
-              <button class="font-medium btn bg-blue-700 text-white text-base">
-                Completed
-              </button>
-            </div>
-          </div>
-          <div class="bg-slate-50 rounded-2xl p-8">
-            <p class="bg-white text-lg inline px-5 py-3 rounded-lg">ShopEase</p>
-            <h1 class="text-2xl font-medium py-4">Fix Mobile Button Issue</h1>
-            <input
-              class="text-ellipsis text-slate-500 p-4 rounded-lg w-full h-24"
-              value="Debug using Chrome DevTools, check for overlapping elements, and
-            ensure onClick works properly and ensure onClick works properly"
-            />
-            <hr class="border-dotted my-3" />
-            <div class="flex items-center justify-between">
-              <div>
-                <p class="text-slate-500">Deadline</p>
-                <p>21 March 2025</p>
-              </div>
-              <button class="font-medium btn bg-blue-700 text-white text-base">
+              <button
+                class="complete-btn font-medium btn bg-blue-700 hover:bg-blue-500 active:bg-blue-700 text-white text-base"
+              >
                 Completed
               </button>
             </div>
@@ -224,13 +241,17 @@
             <img src="./assets/activity.png" alt="" />
             <h1 class="text-xl font-medium">Activity Log</h1>
           </div>
-          <button class="btn bg-blue-700 text-white">Clear History</button>
+          <button
+            class="btn bg-blue-700 hover:bg-blue-500 active:bg-blue-700 text-white"
+          >
+            Clear History
+          </button>
         </div>
         <hr class="border-dotted" />
-        <p class="text-lg text-slate-600 bg-slate-50 rounded-xl p-5 my-5">
+        <p class="text-lg text-slate-600 bg-slate-100 rounded-xl p-5 my-5">
           You have Complete The Task Add Dark Mode at 12:48:15 PM
         </p>
-        <p class="text-lg text-slate-600 bg-slate-50 rounded-xl p-5 my-5">
+        <p class="text-lg text-slate-600 bg-slate-100 rounded-xl p-5 my-5">
           You have Complete The Task Add Dark Mode at 12:48:15 PM
         </p>
       </section>
