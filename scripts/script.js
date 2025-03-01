@@ -68,7 +68,10 @@ function completeButton() {
         You have Complete The Task ${taskHead} at ${currentTime}
       </p>`;
       activityContainer.appendChild(p);
-
+    
+      document.getElementById("clear-history-btn").addEventListener("click", function(){
+        p.innerHTML = ""
+      })
     });
   }
 }
