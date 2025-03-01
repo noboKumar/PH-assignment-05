@@ -59,12 +59,16 @@
             Question-1: What are the different ways to select an element in the
             DOM?
           </h1>
-          <hr class="border-dotted" />
+          <hr class="border-dashed border-2" />
           <p class="text-slate-500 pt-5 text-lg">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam,
-            minus iure laborum saepe dolorum tempora, officia perspiciatis ut
-            recusandae nisi ea tenetur quaerat cumque accusamus fugiat commodi,
-            aut perferendis eos?
+            we Have 5 methods to select elements:
+            <ul class="list-decimal p-5 text-slate-500 text-lg">
+              <li>getElementById() -select an element by ID.</li>
+              <li>getElementsByClassName() -select element by class name.</li>
+              <li>getElementsByTagName() -select element by tag name.</li>
+              <li>querySelector() -select first element using css selector.</li>
+              <li>querySelectorAll() -select all elements using css selector.</li>
+            </ul>
           </p>
         </div>
         <div class="bg-white p-5 rounded-lg my-5">
@@ -72,36 +76,39 @@
             Question-2: What is the difference between innerHTML, innerText, and
             textContent ?
           </h1>
-          <hr class="border-dotted" />
-          <p class="text-slate-500 pt-5 text-lg">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam,
-            minus iure laborum saepe dolorum tempora, officia perspiciatis ut
-            recusandae nisi ea tenetur quaerat cumque accusamus fugiat commodi,
-            aut perferendis eos?
-          </p>
+          <hr class="border-dashed border-2" />
+          <div class="text-slate-500 pt-5 text-lg">
+            <h1 class="font-semibold">1. innerHTML:</h1>
+            <ul class="list-disc pl-5">
+              <li>get or set HTML content inside an element.</li>
+            </ul>
+            <h1 class="font-semibold">2.innerText:</h1>
+            <ul class="list-disc pl-5">
+              <li>get or set only visible text inside an element.</li>
+            </ul>
+            <h1 class="font-semibold">3.textContent:</h1>
+            <ul class="list-disc pl-5">
+              <li>This also gives all text form an element wheather it is visible or not.</li>
+            </ul>
+          </div>
         </div>
         <div class="bg-white p-5 rounded-lg my-5">
           <h1 class="text-xl font-semibold pb-5">
             Question-3: What is event delegation in the DOM?
           </h1>
-          <hr class="border-dotted" />
+          <hr class="border-dashed border-2" />
           <p class="text-slate-500 pt-5 text-lg">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam,
-            minus iure laborum saepe dolorum tempora, officia perspiciatis ut
-            recusandae nisi ea tenetur quaerat cumque accusamus fugiat commodi,
-            aut perferendis eos?
+            event deligation is a method where we use a single event listner for multiple element for that we set event listener to parent element this works dynamically added children also. because of event bubbling.
+            this helps us to use less eventListener() function that makes code more efficient.
           </p>
         </div>
         <div class="bg-white p-5 rounded-lg my-5">
           <h1 class="text-xl font-semibold pb-5">
             Question-4: What is event bubbling in the DOM?
           </h1>
-          <hr class="border-dotted" />
+          <hr class="border-dashed border-2" />
           <p class="text-slate-500 pt-5 text-lg">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam,
-            minus iure laborum saepe dolorum tempora, officia perspiciatis ut
-            recusandae nisi ea tenetur quaerat cumque accusamus fugiat commodi,
-            aut perferendis eos?
+            event bubbling is a process where an event starts from the target element and moves up. it allows parent elements to handle events by it's child elements.
           </p>
         </div>
         <div class="bg-white p-5 rounded-lg my-5">
@@ -109,12 +116,13 @@
             Question-5: How do you create, add, and remove elements using
             JavaScript?
           </h1>
-          <hr class="border-dotted" />
+          <hr class="border-dashed border-2" />
           <p class="text-slate-500 pt-5 text-lg">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam,
-            minus iure laborum saepe dolorum tempora, officia perspiciatis ut
-            recusandae nisi ea tenetur quaerat cumque accusamus fugiat commodi,
-            aut perferendis eos?
+            <ul class="list-disc pl-5 text-slate-500 text-lg">
+              <li>To Create Element We use document.createElement()</li>
+              <li>To Add element We use append() or appendChild()</li>
+              <li>To Remove an element we use element.remove() or removeChild()</li>
+            </ul>
           </p>
         </div>
       </div>
