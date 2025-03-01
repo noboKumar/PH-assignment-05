@@ -48,19 +48,23 @@ function completeButton() {
   let totalTask = Number(document.getElementById("total-task").innerText) + 1;
   const activityContainer = document.getElementById("activity-container");
   const currentTime = new Date().toLocaleTimeString();
-  const cards = document.getElementsByClassName("cards");
 
   for (const button of completeBtn) {
     button.addEventListener("click", function (event) {
       alert("Board Updated Successfully");
-      document.getElementById("task-assigned").innerText = `0${taskAssign--}`;
-      document.getElementById("total-task").innerText = `${totalTask++}`;
+
+      setInnerText("task-assigned", `0${taskAssign--}`);
+      setInnerText("total-task", `${totalTask++}`);
+
       button.disabled = true;
 
       if (taskAssign === -1) {
         alert("congrats!!! You Have Completed all the current Task");
       }
-      const taskHead = event.target.parentNode.parentNode.querySelector(".task-head").innerText;
+      const taskHead =
+        event.target.parentNode.parentNode.querySelector(
+          ".task-head"
+        ).innerText;
 
       const p = document.createElement("p");
       p.innerHTML = `
@@ -68,10 +72,12 @@ function completeButton() {
         You have Complete The Task ${taskHead} at ${currentTime}
       </p>`;
       activityContainer.appendChild(p);
-    
-      document.getElementById("clear-history-btn").addEventListener("click", function(){
-        p.innerHTML = ""
-      })
+
+      document
+        .getElementById("clear-history-btn")
+        .addEventListener("click", function () {
+          p.innerHTML = "";
+        });
     });
   }
 }
